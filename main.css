@@ -22,85 +22,83 @@ body {
 }
 
 .section-title {
-    color: #17252a;
-    text-align: center;
+	color: #17252a;
+	text-align: center;
 }
 
 .plan {
-    background: #3aafa9;
-    text-align: center;
-    padding: 16px;
-    margin: 8px;
-    display: inline-block;
-    width: 30%;
-    vertical-align: middle;
+	background: #3aafa9;
+	text-align: center;
+	padding: 16px;
+	margin: 8px;
+	display: inline-block;
+	width: 30%;
+	vertical-align: middle;
 }
 
 /* rgba - the a sets its opacity/transparency */
 .plan--highlighted {
-    background: #008080;
-    color: white;
-    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.5);
+	background: #008080;
+	color: white;
+	box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* border radius curves the edges */
 .plan__annotation {
-    background: white;
-    color: #008080;
-    padding: 8px;
-    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.5);
-    border-radius: 6px;
-
+	background: white;
+	color: #008080;
+	padding: 8px;
+	box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.5);
+	border-radius: 6px;
 }
 
 .plan__title {
-    color: #17252a;
+	color: #17252a;
 }
 
 .plan__price {
-    color: white
+	color: white;
 }
 
 .plan--highlighted .plan__title {
-    color: white
+	color: white;
 }
 
 /* list-style: none - removes bullet points */
 .plan__features {
-    list-style: none;
-     margin: 0; 
-    padding: 0; 
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .plan__features li {
-    margin: 8px 0;
+	margin: 8px 0;
 }
 
 /* inherit overrides the browser default in this case  */
 .button {
-    background: #17a2b8;
-    color: white;
-    font: inherit;
-    border: 1.5px solid #17a2b8;
-    padding: 8px;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
+	background: #17a2b8;
+	color: white;
+	font: inherit;
+	border: 1.5px solid #17a2b8;
+	padding: 8px;
+	border-radius: 8px;
+	font-weight: bold;
+	cursor: pointer;
 }
 
-.button:hover, 
+.button:hover,
 .button:active {
-    background: white;
-    color: #17a2b8
-
+	background: white;
+	color: #17a2b8;
 }
 
 .button:focus {
-    outline: none;
+	outline: none;
 }
 
 #key-features {
-    background: #ff1b68;
+	background: #ff1b68;
 }
 .main-header {
 	width: 100%;
@@ -110,57 +108,51 @@ body {
 
 /* make list elements display in one line and move to the right*/
 .main-header > div {
-    display: inline-block;
-    vertical-align: middle;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 /* text-decoration removes underline (and other default settings) */
 .brand {
-    color: #17252a;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 22px;
+	color: #17252a;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 22px;
 }
 
 .main-nav {
-    display: inline-block;
-    text-align: right;
-    /* width: calc(100% - 74px); doesn't work for me */
-    width: 85%;
-    vertical-align: middle;
+	display: inline-block;
+	text-align: right;
+	/* width: calc(100% - 74px); doesn't work for me */
+	width: 85%;
+	vertical-align: middle;
 }
 
-
 .main-nav__items {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
 .main-nav__item {
-    display: inline-block;
-    margin: 0 16px;
+	display: inline-block;
+	margin: 0 16px;
 }
 
-
 .main-nav__item a {
-    text-decoration: none;
-    color: #17252a;
-    font-weight: bold;
-    padding: 3px 0;
-
+	text-decoration: none;
+	color: #17252a;
+	font-weight: bold;
+	padding: 3px 0;
 }
 
 /* pseudo class - control state of an element */
-.main-nav__item a:hover, 
-.main-nav__item a:active
-{
-    color: white;
-    border-bottom: 5px solid white;
-
+.main-nav__item a:hover,
+.main-nav__item a:active {
+	color: white;
+	border-bottom: 5px solid white;
 }
 
- 
 /* pseudo element - control parts of an element */
 /* p::first-letter {
     color: red;
@@ -168,15 +160,15 @@ body {
 
 /* bem naming convention. cta - call to action */
 .main-nav__item--cta a {
-    color: white;
-    background: #ff1b68;
-    padding: 8px 16px;
-    border-radius: 8px;
+	color: white;
+	background: #ff1b68;
+	padding: 8px 16px;
+	border-radius: 8px;
 }
 
 .main-nav__item--cta a:hover,
 .main-nav__item--cta a:active {
-    color: #ff1b68;
-    background: white;
-    border: none
+	color: #ff1b68;
+	background: white;
+	border: none;
 }
