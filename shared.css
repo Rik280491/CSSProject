@@ -24,12 +24,19 @@ body {
 	vertical-align: middle;
 }
 
-/* text-decoration removes underline (and other default settings) */
+/* {text-decoration: none} removes underline (and other default settings) */
+/* this is an anchor tag, which is an inline el. Set inline block so child element (.brand img) uses .brand height */
 .brand {
 	color: #17252a;
 	text-decoration: none;
 	font-weight: bold;
 	font-size: 22px;
+	height: 22px;
+	display: inline-block;
+}
+
+.brand img {
+	height: 100%;
 }
 
 .main-nav {

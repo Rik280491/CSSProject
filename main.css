@@ -1,14 +1,25 @@
+/* {background-size: contain} is useful because it ensures the entire pic is visable. However, does not fill out the container like cover does */
 #product-overview {
-	background: url("./images/freedom.jpg");
+	background: url("./images/freedom.jpg") left 10% bottom 20%/cover no-repeat border-box ;
+	/* background-position: left 10% bottom 20%;
+	background-size: cover;
+	background-repeat: no-repeat; 
+	background-origin: border-box;
+	background-clip: border-box; */
 	width: 100%;
 	height: 528px;
 	padding: 10px;
+	margin-top: 43px;
+	position: relative;
 }
 
 /* combinator: descendant selector, not inheritance */
 #product-overview h1 {
 	color: white;
 	font-family: "Anton", sans-serif;
+	position: absolute;
+	bottom: 5%;
+	left: 3%;
 }
 
 .section-title {
@@ -61,7 +72,7 @@
 	color: white;
 }
 
-/* list-style: none - removes bullet points */
+/* {list-style: none} - removes bullet points */
 .plan__features {
 	list-style: none;
 	margin: 0;

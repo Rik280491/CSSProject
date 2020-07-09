@@ -2,7 +2,7 @@ main {
     padding-top: 32px;
 }
 
-/* for position: fixed, the positioning context is the viewport */
+/* {position: fixed}, the positioning context is the viewport */
 .background {
     background: url("../images/plans-background.jpg");
     width: 100%;
@@ -11,15 +11,15 @@ main {
     z-index: -1;
 }
 
-/* position:relative, positioning context is its original position */
+/* {position:relative}, positioning context is its original position */
 .package {
     width: 80%;
     margin: 16px 0;
     border: 4px solid #008080;
     border-left: none;
     position: relative;
-
 }
+
 
 .package a {
     text-decoration: none;
@@ -34,7 +34,7 @@ main {
     border-color: #ff5454;
 }
 
-/* for position: absolute, positioning context is to the nearest ancestor with a position property (<html> is default) - .package */
+/* {position: absolute}, positioning context is to the nearest ancestor with a position property (<html> is default) - .package */
 .package__badge {
     position: absolute;
     top: 0;
