@@ -1,3 +1,9 @@
+/* can also import custom fonts. would have to have a file for each fontweight/style. not ideal. woff and woff2 are two other cross browser supported formats */
+/* @font-face {
+	font-family: "AnonymousPro";
+	src: url("anonymousPro-Regular.ttf") format("truetype")
+} */
+
 main {
 	padding-top: 2rem;
 }
@@ -50,12 +56,19 @@ main {
 	color: #979797;
 }
 
+/* you need to import the different font weights and styles to get access here. note: some styles may still work if the browser has prebuilt options. e.g chrome has an italic style it can add */
 .package__info {
 	padding: 1rem;
 	border: 1px solid #008080;
-	font-size: 1.2rem;
+	/* font-size: 1.2rem; */
 	color: #008080;
 	background: white;
+	/* font-family: "Roboto", sans-serif; */
+	/* font-weight: 400; */
+	/* font-style: italic; */
+	/* line-height: 2; */
+	font: 400 italic 1.2rem/2 "Roboto", sans-serif;
+	/* font shorthand (order matters) {font-size}/{line-height} */
 }
 
 /* ensures float in #free doesn't overlap other elements. hacky - flexbox provides a better solution to using float*/

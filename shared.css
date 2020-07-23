@@ -1,3 +1,7 @@
+/* this way is just as valid as using a link tag in the html file */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
 /* setting element width/height will include content, padding + border, but not margin*/
 * {
 	box-sizing: border-box;
