@@ -1,12 +1,10 @@
 /* this way is just as valid as using a link tag in the html file */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 /* setting element width/height will include content, padding + border, but not margin*/
 * {
 	box-sizing: border-box;
 }
-
 
 body {
 	font-family: "Montserrat", sans-serif;
@@ -22,7 +20,7 @@ main {
 .backdrop {
 	position: fixed;
 	display: none;
-	left: 0; 
+	left: 0;
 	top: 0;
 	z-index: 100;
 	width: 100vw;
@@ -30,20 +28,18 @@ main {
 	background: rgba(0, 0, 0, 0.5);
 }
 
+/* flex container. justify content main axis. align-items cross axis */
 .main-header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
 	background: #3aafa9;
-    padding: 0.5rem 1rem; 
-    z-index: 1;
-}
-
-/* make list elements display in one line and move to the right*/
-.main-header > div {
-	display: inline-block;
-	vertical-align: middle;
+	padding: 0.5rem 1rem;
+	z-index: 60;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 /* hamburger button for mobile navbar */
@@ -55,49 +51,46 @@ main {
 	padding-top: 0;
 	padding-bottom: 0;
 	vertical-align: middle;
-  }
-  
-  .toggle-button:focus {
+}
+
+.toggle-button:focus {
 	outline: none;
-  }
-  
-  .toggle-button__bar {
+}
+
+.toggle-button__bar {
 	width: 100%;
 	height: 0.2rem;
 	background: black;
 	display: block;
 	margin: 0.6rem 0;
-  }
+}
 
 /* {text-decoration: none} removes underline (and other default settings) */
-/* this is an anchor tag, which is an inline el. Set inline block so child element (.brand img) uses .brand height */
 .brand {
 	color: #17252a;
 	text-decoration: none;
 	font-weight: bold;
-	height: 2.5rem;
-	display: inline-block;
-	vertical-align: middle;
 }
 
 .brand img {
-	height: 100%;
+	height: 2.5rem;
+	vertical-align: middle;
 }
 
 /* do not want the main nav to show in mobile view */
 .main-nav {
 	display: none;
-	
 }
 
+/* a flex container within another flex c within another flex c is allowed. this < .main-nav (line 197) < .main-header (34) */
 .main-nav__items {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	display: flex;
 }
 
 .main-nav__item {
-	display: inline-block;
 	margin: 0 1rem;
 }
 
@@ -149,24 +142,27 @@ main {
 	background: white;
 	width: 80%;
 	height: 100vh;
-  }
-  
-  .mobile-nav__items {
+}
+
+.mobile-nav__items {
 	width: 90%;
 	height: 100%;
 	list-style: none;
-	margin: 10% auto;
+	margin: 0 auto;
 	padding: 0;
-	text-align: center;
-  }
-  
-  .mobile-nav__item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.mobile-nav__item {
 	margin: 1rem 0;
-  }
-  
-  .mobile-nav__item a {
+}
+
+.mobile-nav__item a {
 	font-size: 1.5rem;
-  }
+}
 
 /* inherit overrides the browser default in this case  */
 .button {
@@ -190,59 +186,61 @@ main {
 	outline: none;
 }
 
-
 @media (min-width: 40rem) {
 	.toggle-button {
 		display: none;
 	}
-
+	/* flexbox is a much better solution */
 	.main-nav {
-		display: inline-block;
+		/* display: inline-block;
 		text-align: right;
-		/* width: calc(100% - 74px); doesn't work for me */
 		width: 85%;
-		vertical-align: middle;
+		vertical-align: middle; */
+		display: flex;
 	}
-	
-	
 }
 
 .main-footer {
-    background-color: black;
-    padding: 2rem;
-    margin-top: 3rem;
+	background-color: black;
+	padding: 2rem;
+	margin-top: 3rem;
 }
 
 .main-footer__links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 }
 
 .main-footer__link {
-    display: block;
-    margin: 1rem 0;
+	margin: 0.5rem 0;
 }
 
 .main-footer__link a {
-    color: white;
-    text-decoration: none;
+	color: white;
+	text-decoration: none;
 }
 
 .main-footer__link a:hover,
 .main-footer__link a:active {
-    color: #ccc
+	color: #ccc;
 }
 
 /* a better way of opening and closing - see shared.js */
 .open {
-	display: block !important
+	display: block !important;
 }
 
 @media (min-width: 40rem) {
 	.main-footer__link {
-		display: inline-block;
 		margin: 0 1rem;
+	}
+	.main-footer__links {
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
 	}
 }

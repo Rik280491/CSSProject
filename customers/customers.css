@@ -1,5 +1,5 @@
 main {
-  padding-top: 2.5rem;
+	padding-top: 2.5rem;
 }
 
 /* em/rem allows for font size to change in response to user browser settings. em/rem can also be used in margin/padding so it changes in accordance with the font size  */
@@ -23,7 +23,6 @@ main {
 .testimonial__info {
 	text-align: right;
 	padding: 0.9rem;
-
 }
 
 #customer-2.testimonial {
@@ -60,16 +59,16 @@ main {
 	margin: 0.2rem;
 }
 
-
 @media (min-width: 40rem) {
 	.testimonial {
-    margin: 3rem auto;
-    max-width: 93.75rem;
+		margin: 3rem auto;
+		max-width: 93.75rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
 	}
 	.testimonial__image-container {
-		display: inline-block;
-    vertical-align: middle;
-    width: 66%;
+		width: 66%;
 	}
 
 	.testimonial__info {
