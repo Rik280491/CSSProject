@@ -6,15 +6,26 @@
 	box-sizing: border-box;
 }
 
+/* also needed for grid auto */
+html {
+	height: 100%;
+}
+
+/* elements not part of document flow (e.g fixed and absolute) are not part of the grid */
 body {
 	font-family: "Montserrat", sans-serif;
 	margin: 0;
+	display: grid;
+	grid-template-rows: 3.5rem auto fit-content(8rem);
+	grid-template-areas:
+		"header"
+		"main"
+		"footer";
+	height: 100%;
 }
 
-/* this is the height minus the height of the header and footer */
 main {
-	min-height: calc(100vh - 3.5rem - 8rem);
-	margin-top: 3.5rem;
+	grid-area: main;
 }
 
 .backdrop {
@@ -204,6 +215,7 @@ main {
 	background-color: black;
 	padding: 2rem;
 	margin-top: 3rem;
+	grid-area: footer;
 }
 
 .main-footer__links {
