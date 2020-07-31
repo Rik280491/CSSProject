@@ -19,12 +19,14 @@ main {
 }
 
 /* {position:relative}, positioning context is its original position */
+/* overflow hidden crops anything that goes beyond the boundaries of the element. in this case package badge  */
 .package {
 	width: 80%;
 	margin: 1rem 0;
 	border: 4px solid #008080;
 	border-left: none;
 	position: relative;
+	overflow: hidden;
 }
 
 .package a {
@@ -41,15 +43,19 @@ main {
 }
 
 /* {position: absolute}, positioning context is to the nearest ancestor with a position property (<html> is default) - .package */
+/* translate allows you to move element along an axis. translate(x axis, y axis)  */
 .package__badge {
 	position: absolute;
 	top: 0;
 	right: 0;
-	margin: 1.2rem;
+	margin: 0;
 	font-size: 0.8rem;
 	color: white;
 	background: #ff5454;
 	padding: 0.5rem;
+	transform: rotate(45deg) translate(3.5rem, -1rem);
+	width: 12rem;
+	text-align: center;
 }
 
 .package__subtitle {
