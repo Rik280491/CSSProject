@@ -151,9 +151,12 @@
 }
 
 /* plans modal */
+/* opacity 0 makes it invisible, better than display none as it is still in the doc flow. also can be used with transitions */
 .modal {
 	position: fixed;
-	display: none;
+	opacity: 0;
+	transform: translateY(-3rem);
+	transition: opacity 200ms ease-out, transform 500ms ease-out;
 	z-index: 200;
 	top: 20%;
 	left: 30%;
