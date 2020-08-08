@@ -1,0 +1,11 @@
+// This is a partial
+
+// Variables - will compile to css code that does not use CSS Variables - no browser support worries
+$size-default: 1rem;
+// Maps
+$colours: (
+	main: #521751,
+	secondary: #fa923f,
+);
+// Lists - variables can store more than one value
+$border-default: 0.05rem solid map-get($colours, main);
